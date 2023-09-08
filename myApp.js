@@ -5,8 +5,8 @@ app.use('/public', express.static(process.cwd() + '/public'));
 
 
 app.get('/', (req, res) => {
+    console.log("Hello word");
     res.sendFile(process.cwd() + '/views/index.html');
-    console.log('Hello Word');
 })
 
 
