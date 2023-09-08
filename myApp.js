@@ -2,9 +2,21 @@ let express = require('express');
 let app = express();
 // console.log("Hello World");
 // console.log(process.env.MESSAGE_STYLE);
+
+
+
+function logger(req, res, next) {
+    const method = req.method
+    const path =  req.path
+    const ip = req.ip
+    console.log(`${method} ${path} - ${ip}`);
+    next();
+  }
 app.use('/public', express.static(process.cwd() + '/public'));
+app.use(logger)
 app.route('/')
     .get(function (req, res) {
+       
         res.sendFile(process.cwd() + '/views/index.html');
     })
 
