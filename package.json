@@ -15,5 +15,9 @@
 	"author": "Aufal",
 	"description": "ini deskripsri",
 	"license": "MIT",
-	"keywords": [ "expressJs", "nodeJS", "backend","freecodecamp" ]
+	"keywords": [ "expressJs", "nodeJS", "backend","freecodecamp" ],
+	"engines": {
+		"node": "18.12.1",
+		"npm": "8.19.2"
+	  }
 }
