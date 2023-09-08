@@ -9,6 +9,11 @@ app.get('/', (req, res) => {
     res.send(console.log("Hello Word"))
 })
 
+app.route('/_api/hello-console')
+  .get(function(req, res, next) {
+    console.log('Hello Word');
+  });
+
 
 
 
